@@ -12,10 +12,12 @@ export class ExchangeComponent implements OnInit {
 
   private items: Item[]=[]
   private data: Item[]=[]
+  private modelStatus: boolean;
 
   constructor(private stuffService: StuffService) { 
     this.data = stuffService.getAllStuff().filter(x => x.seller=="Aswin");
     this.items = this.data; 
+    this.modelStatus = false;
   }
 
   ngOnInit() {
@@ -42,6 +44,10 @@ export class ExchangeComponent implements OnInit {
             break;
     }
 
+  }
+
+  private toggleModel(){
+    this.modelStatus = !this.modelStatus;
   }
 
 

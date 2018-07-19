@@ -47,11 +47,19 @@
               <clr-dg-cell>{{item.name}}</clr-dg-cell>
               <clr-dg-cell>{{item.seller }}</clr-dg-cell>
               <clr-dg-cell>{{item.location}}</clr-dg-cell>
-              <button class="action-item" (click)="onBuy(item)">Select</button>
+              <button class="action-item" (click)="toggleModel()">Select</button>
           </clr-dg-row>
 
       </clr-datagrid>
-
   </div>
 
+  <clr-modal [(clrModalOpen)]="modelStatus">
+        <h3 class="modal-title">User Notified</h3>
+        <div class="modal-body">
+            <p>User has been notified, please keep checking your inbox for a response. </p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="toggleModel()">Ok</button>
+        </div>
+    </clr-modal>
 </div>
