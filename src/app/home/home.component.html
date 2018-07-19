@@ -1,0 +1,59 @@
+<div class="container">
+
+    <div class="clr-dg-row">
+            <button class="action-item" routerLink="/sellpage">Sell your stuff</button>
+    </div>  
+
+    <div class="clr-dg-row">
+        <p *ngIf="items.length==0"> There are no items available in the marketplace</p>
+    </div>
+
+    <div class="clr-dg-row" *ngIf="!items.length==0">
+            Search: <input clrInput type="text" [(ngModel)]="searchBar"  />
+            <button class="action-item" (click)="filter()">Search</button>
+    </div>
+
+    <div>
+
+            <div class="form-group"></div>
+            <div class="radio-inline">
+                <input type="radio" name="gridRadios1" id="all" checked>
+                <label for="checkrads_11">All</label>
+            </div>
+            <div class="radio-inline">
+                <input type="radio" name="gridRadios1" id="books" >
+                <label for="checkrads_12">Books</label>
+            </div>
+            <div class="radio-inline">
+                <input type="radio" name="gridRadios1" id="dvd">
+                <label for="checkrads_13">DVD</label>
+            </div>
+            <div class="radio-inline">
+                <input type="radio" name="gridRadios1" id="games" >
+                <label for="checkrads_14">Games</label>
+            </div>
+
+    </div>
+
+    <div class="clr-dg-row">
+
+        <clr-datagrid >
+            <clr-dg-column>Item ID</clr-dg-column>
+            <clr-dg-column>Category</clr-dg-column>
+            <clr-dg-column>Name</clr-dg-column>
+            <clr-dg-column>Seller</clr-dg-column>
+            <clr-dg-column>Location</clr-dg-column>
+
+            <clr-dg-row *ngFor="let item of items">
+                <clr-dg-cell>{{item.id}}</clr-dg-cell>
+                <clr-dg-cell>{{item.category}}</clr-dg-cell>
+                <clr-dg-cell>{{item.seller }}</clr-dg-cell>
+                <clr-dg-cell>{{item.location}}</clr-dg-cell>
+                <button class="action-item" (click)="onBuy(item)">Buy</button>
+            </clr-dg-row>
+
+        </clr-datagrid>
+
+    </div>
+
+</div>

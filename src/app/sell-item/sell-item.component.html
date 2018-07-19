@@ -1,0 +1,30 @@
+
+
+<div class="container">
+
+  <div>
+      <h3>Sell your stuff here</h3>
+  </div>
+
+    <div>
+        <label>Your Name</label>
+        <input clrInput type="text" [(ngModel)]="seller" />
+    </div>
+    <div>
+        <label>Category</label>
+        <input clrInput type="text" [(ngModel)]="category"  />
+    </div>
+    <div>
+        <label>Item Name</label>
+        <input clrInput type="text" [(ngModel)]="name" />
+    </div>
+    <div>
+        <label>Location</label>
+        <input clrInput type="text" [(ngModel)]="location"  />
+    </div>
+
+    <div>
+        <button class="action-item" (click)="sellThis()">Sell</button>
+    </div>
+
+  </div>
