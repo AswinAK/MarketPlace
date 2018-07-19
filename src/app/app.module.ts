@@ -9,7 +9,8 @@ import { ROUTING } from "./app.routing";
 import { HomeComponent } from "./home/home.component";
 import {StuffService} from "./stuff.service";
 import { ItemDisplayComponent } from './item-display/item-display.component';
-import { SellItemComponent } from './sell-item/sell-item.component'
+import { SellItemComponent } from './sell-item/sell-item.component';
+import { ExchangeComponent } from './exchange/exchange.component'
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SellItemComponent } from './sell-item/sell-item.component'
         AppComponent,
         HomeComponent,
         ItemDisplayComponent,
-        SellItemComponent
+        SellItemComponent,
+        ExchangeComponent
     ],
     imports: [
         BrowserAnimationsModule,

@@ -1,0 +1,57 @@
+<div class="container">
+
+  <div class="clr-dg-row">
+      <p *ngIf="items.length==0"> There are no items available in the marketplace</p>
+  </div>
+
+  <div class="clr-dg-row" *ngIf="!items.length==0">
+          Search: <input clrInput type="text" [(ngModel)]="searchBar"  />
+          <button class="action-item" (click)="filter()">Search</button>
+  </div>
+
+  <div>
+
+      <div class="form-group">
+          <div class="radio-inline">
+              <input type="radio" name="gridRadios1" id="all" (click)="refresh(0)">
+              <label for="all">All</label>
+          </div>
+          <div class="radio-inline">
+              <input type="radio" name="gridRadios1" id="books" (click)="refresh(1)">
+              <label for="books">Books</label>
+          </div>
+          <div class="radio-inline">
+              <input type="radio" name="gridRadios1" id="dvd" (click)="refresh(2)">
+              <label for="dvd">DVDs</label>
+          </div>
+          <div class="radio-inline">
+              <input type="radio" name="gridRadios1" id="games" (click)="refresh(3)">
+              <label for="games">Games</label>
+          </div>
+      </div>
+
+  </div>
+
+  <div class="clr-dg-row">
+
+      <clr-datagrid >
+          <clr-dg-column>Item ID</clr-dg-column>
+          <clr-dg-column>Category</clr-dg-column>
+          <clr-dg-column>Name</clr-dg-column>
+          <clr-dg-column>Seller</clr-dg-column>
+          <clr-dg-column>Location</clr-dg-column>
+
+          <clr-dg-row *ngFor="let item of items">
+              <clr-dg-cell>{{item.id}}</clr-dg-cell>
+              <clr-dg-cell>{{item.category}}</clr-dg-cell>
+              <clr-dg-cell>{{item.name}}</clr-dg-cell>
+              <clr-dg-cell>{{item.seller }}</clr-dg-cell>
+              <clr-dg-cell>{{item.location}}</clr-dg-cell>
+              <button class="action-item" (click)="onBuy(item)">Select</button>
+          </clr-dg-row>
+
+      </clr-datagrid>
+
+  </div>
+
+</div>

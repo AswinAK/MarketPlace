@@ -18,7 +18,7 @@ export class HomeComponent {
     private data: Item[]=[]
 
     constructor(private stuffService: StuffService) {
-        this.data = stuffService.getAllStuff();
+        this.data = stuffService.getAllStuff().filter(x => x.seller!='Aswin');
         this.items = this.data; 
       }
 

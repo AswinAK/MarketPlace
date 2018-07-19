@@ -8,12 +8,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { SellItemComponent } from './sell-item/sell-item.component';
 
 import { HomeComponent } from './home/home.component';
+import { ExchangeComponent } from './exchange/exchange.component';
 
 
 export const ROUTES: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
-    {path: 'sellpage', component: SellItemComponent}
+    {path: 'sellpage', component: SellItemComponent},
+    {path: 'exchange', component: ExchangeComponent}
 ];
 
 export const ROUTING: ModuleWithProviders = RouterModule.forRoot(ROUTES);

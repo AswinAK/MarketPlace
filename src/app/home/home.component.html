@@ -48,9 +48,10 @@
             <clr-dg-row *ngFor="let item of items">
                 <clr-dg-cell>{{item.id}}</clr-dg-cell>
                 <clr-dg-cell>{{item.category}}</clr-dg-cell>
+                <clr-dg-cell>{{item.name}}</clr-dg-cell>
                 <clr-dg-cell>{{item.seller }}</clr-dg-cell>
                 <clr-dg-cell>{{item.location}}</clr-dg-cell>
-                <button class="action-item" (click)="onBuy(item)">Exchange</button>
+                <button class="action-item"  routerLink="/exchange" >Exchange</button>
             </clr-dg-row>
 
         </clr-datagrid>
