@@ -18,4 +18,11 @@ export class StuffService{
         return this.items;
     }
 
+    addStuff(newItem){
+        console.log('add new stuff service '+JSON.stringify(newItem));
+        this.http.post('', newItem);
+    
+    }
+    
+
 }

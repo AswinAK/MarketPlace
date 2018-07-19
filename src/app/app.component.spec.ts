@@ -16,7 +16,6 @@ describe('AppComponent', () => {
         TestBed.configureTestingModule({
             declarations: [
                 AppComponent,
-                AboutComponent,
                 HomeComponent
             ],
             imports: [

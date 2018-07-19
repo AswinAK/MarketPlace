@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StuffService} from '../stuff.service';
 
 @Component({
   selector: 'app-sell-item',
@@ -10,13 +11,15 @@ export class SellItemComponent implements OnInit {
   category: string = '';
   name: string ='';
   location: string = '';
+  stuffService: StuffService
 
 
-  constructor() { 
+  constructor(service: StuffService) { 
     this.seller ='';
     this.category = '';
     this.name ='';
     this.location = '';
+    this.stuffService = service;
   }
 
   ngOnInit() {
@@ -24,6 +27,7 @@ export class SellItemComponent implements OnInit {
 
   private sellThis(){
     console.log('Selling '+this.name);
+    this.stuffService.addStuff({id:0, category: this.category, name: this.name, seller: this.seller, location: this.location})
   }
 
 }

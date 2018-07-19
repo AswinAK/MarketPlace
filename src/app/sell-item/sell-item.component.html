@@ -3,29 +3,16 @@
 <div class="container">
 
   <div>
-      <h3>Sell your stuff here</h3>
+      <h3>Enter Details</h3>
   </div>
-
+  <br/>
     <div>
         <label>Your Name</label>
         <input clrInput type="text" [(ngModel)]="seller" />
     </div>
     <div>
         <label>Category</label>
-        <div class="form-group">
-            <div class="radio">
-                <input type="radio" name="gridRadios1" id="books">
-                <label for="books">Books</label>
-            </div>
-            <div class="radio">
-                <input type="radio" name="gridRadios1" id="dvd">
-                <label for="dvd">DVDs</label>
-            </div>
-            <div class="radio">
-                <input type="radio" name="gridRadios1" id="games">
-                <label for="games">Games</label>
-            </div>
-        </div>
+        <input clrInput type="text" [(ngModel)]="category" />
     </div>
     <div>
         <label>Item Name</label>
@@ -35,9 +22,9 @@
         <label>Location</label>
         <input clrInput type="text" [(ngModel)]="location"  />
     </div>
-
+    <br/>
     <div>
-        <button class="action-item" (click)="sellThis()">Sell</button>
+        <button class="action-item" (click)="sellThis()">Save</button>
     </div>
 
   </div>
