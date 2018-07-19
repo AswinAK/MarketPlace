@@ -6,6 +6,7 @@
 import { ModuleWithProviders } from '@angular/core/src/metadata/ng_module';
 import { Routes, RouterModule } from '@angular/router';
 import { SellItemComponent } from './sell-item/sell-item.component';
+import {LoginPageComponent } from './login-page/login-page.component';
 
 import { HomeComponent } from './home/home.component';
 import { ExchangeComponent } from './exchange/exchange.component';
@@ -15,7 +16,9 @@ export const ROUTES: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'sellpage', component: SellItemComponent},
-    {path: 'exchange', component: ExchangeComponent}
+    {path: 'exchange', component: ExchangeComponent},
+    {path: 'login', component: LoginPageComponent}
 ];
 
 export const ROUTING: ModuleWithProviders = RouterModule.forRoot(ROUTES);
+LoginPageComponent

@@ -10,7 +10,10 @@ import { HomeComponent } from "./home/home.component";
 import {StuffService} from "./stuff.service";
 import { ItemDisplayComponent } from './item-display/item-display.component';
 import { SellItemComponent } from './sell-item/sell-item.component';
+
 import { ExchangeComponent } from './exchange/exchange.component'
+
+import { LoginPageComponent } from './login-page/login-page.component'
 
 
 @NgModule({
@@ -19,7 +22,8 @@ import { ExchangeComponent } from './exchange/exchange.component'
         HomeComponent,
         ItemDisplayComponent,
         SellItemComponent,
-        ExchangeComponent
+        ExchangeComponent,
+        LoginPageComponent
     ],
     imports: [
         BrowserAnimationsModule,

@@ -16,10 +16,12 @@ export class HomeComponent {
 
     private items: Item[]=[]
     private data: Item[]=[]
+    private loginStatus: boolean;
 
     constructor(private stuffService: StuffService) {
         this.data = stuffService.getAllStuff().filter(x => x.seller!='Aswin');
         this.items = this.data; 
+        this.loginStatus = false;
       }
 
     private refresh(code : number) {
