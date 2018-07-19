@@ -12,7 +12,20 @@
     </div>
     <div>
         <label>Category</label>
-        <input clrInput type="text" [(ngModel)]="category"  />
+        <div class="form-group">
+            <div class="radio">
+                <input type="radio" name="gridRadios1" id="books">
+                <label for="books">Books</label>
+            </div>
+            <div class="radio">
+                <input type="radio" name="gridRadios1" id="dvd">
+                <label for="dvd">DVDs</label>
+            </div>
+            <div class="radio">
+                <input type="radio" name="gridRadios1" id="games">
+                <label for="games">Games</label>
+            </div>
+        </div>
     </div>
     <div>
         <label>Item Name</label>

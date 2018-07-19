@@ -15,9 +15,35 @@ import {Item} from "../item"
 export class HomeComponent {
 
     private items: Item[]=[]
+    private data: Item[]=[]
 
     constructor(private stuffService: StuffService) {
-        this.items = stuffService.getAllStuff();
+        this.data = stuffService.getAllStuff();
+        this.items = this.data; 
       }
 
-}
+    private refresh(code : number) {
+        
+        switch(code) {
+            
+            case 0: 
+                this.items = this.data;
+                break;
+
+            case 1:
+                this.items = this.data.filter(x => x.category=="Books");
+                console.log("BOOKS");
+                break;
+                
+            case 2:
+                this.items = this.data.filter(x => x.category=="DVDs");
+                break;
+            
+            case 3:
+                this.items = this.data.filter(x => x.category=="Games");
+                break;
+        }
+
+      }
+
+    }

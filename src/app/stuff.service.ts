@@ -8,10 +8,10 @@ export class StuffService{
 
     constructor(private http: Http) { }
 
-    items: Item[]  = [{id: 10, category:'ps4',name:'COD', seller:'Aswin',location:'Palo Alto'},
-    {id: 11, category:'book',name:'GOT', seller:'Aswin',location:'Palo Alto'},
-    {id: 12, category:'xbox',name:'Halo', seller:'Aswin',location:'Palo Alto'}
-,{id: 12, category:'xbox',name:'Halo', seller:'Aswin',location:'Palo Alto'}
+    items: Item[]  = [{id: 10, category:'Games',name:'COD', seller:'Aswin',location:'Palo Alto'},
+    {id: 11, category:'Books',name:'GOT', seller:'Aswin',location:'Palo Alto'},
+    {id: 12, category:'Games',name:'Halo', seller:'Aswin',location:'Palo Alto'},
+    {id: 12, category:'Games',name:'Halo', seller:'Aswin',location:'Palo Alto'}
 ]
 
     getAllStuff(){
